@@ -8,6 +8,23 @@
 
 macOS 版 Codex 宠物用量伴随层。它将 5 小时和 7 天剩余比例显示在 Codex 宠物旁，并通过菜单栏提供控制。
 
+## Windows 版本
+
+Windows 10 22H2 / Windows 11 x64 的原生 Win32 版本在
+[`main-windows`](https://github.com/yeyebbc/codex-usage-loop/tree/main-windows)
+分支独立维护，`main` 分支继续保留稳定的 macOS 实现。Windows 版使用
+Win32、User32 和 GDI+ 分层窗口，支持 Per-Monitor V2 DPI、多显示器、
+透明置顶、点击穿透与本地偏好存储，不依赖 WinUI、WPF 或 WinForms。
+
+- [Windows 构建、运行与已知限制](https://github.com/yeyebbc/codex-usage-loop/blob/main-windows/docs/WINDOWS.md)
+- [浏览 Windows 源码](https://github.com/yeyebbc/codex-usage-loop/tree/main-windows/src)
+
+```powershell
+git clone --branch main-windows https://github.com/yeyebbc/codex-usage-loop.git
+cd codex-usage-loop
+.\scripts\build-windows.ps1 -Configuration Release -Publish
+```
+
 ## 界面示意
 
 <p align="center">
@@ -127,6 +144,25 @@ zsh scripts/install.sh --with-login-agent
 # CodexUsageLoop for macOS
 
 A macOS companion overlay that places Codex usage rings beside the Codex pet and exposes controls from the menu bar.
+
+## Windows version
+
+The native Windows 10 22H2 / Windows 11 x64 implementation is maintained
+separately on the
+[`main-windows`](https://github.com/yeyebbc/codex-usage-loop/tree/main-windows)
+branch, while `main` remains the stable macOS implementation. The Windows
+version uses Win32, User32, and GDI+ layered windows with Per-Monitor V2 DPI,
+multi-display support, transparent topmost overlays, click-through behavior,
+and local preference storage. It does not use WinUI, WPF, or WinForms.
+
+- [Windows build, run, and known limitations](https://github.com/yeyebbc/codex-usage-loop/blob/main-windows/docs/WINDOWS.md)
+- [Browse the Windows source](https://github.com/yeyebbc/codex-usage-loop/tree/main-windows/src)
+
+```powershell
+git clone --branch main-windows https://github.com/yeyebbc/codex-usage-loop.git
+cd codex-usage-loop
+.\scripts\build-windows.ps1 -Configuration Release -Publish
+```
 
 ## Features
 
